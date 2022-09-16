@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/pc/pc.module').then((m) => m.PCModule),
   },
+  {
+    path: 'phone',
+    loadChildren: () =>
+      import('./modules/phone/phone.module').then((m) => m.PhoneModule),
+  },
 ];
 
 @NgModule({
