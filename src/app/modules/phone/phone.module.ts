@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SettingPhoneComponent } from './components/setting/setting.component';
 import { FormsModule } from '@angular/forms';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatButtonModule,
     FormsModule,
     TextFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [],

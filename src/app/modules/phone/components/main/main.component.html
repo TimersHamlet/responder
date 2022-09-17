@@ -2,13 +2,36 @@
   <app-title [label]="'基础信息'"></app-title>
   <mat-form-field appearance="fill">
     <mat-label>姓名</mat-label>
-    <input matInput placeholder="请输入学生姓名" />
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="value"
+      placeholder="请输入学生姓名"
+    />
+    <button
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="value = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
 
   <app-title [label]="'学习内容'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>学习内容</mat-label>
-    <textarea cdkTextareaAutosize matInput></textarea>
+    <textarea cdkTextareaAutosize matInput [(ngModel)]="value"></textarea>
+    <button
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="value = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
 
   <app-title [label]="'随堂测'"></app-title>
@@ -34,7 +57,16 @@
   <app-title [label]="'课后作业'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>课后作业</mat-label>
-    <textarea cdkTextareaAutosize matInput></textarea>
+    <textarea cdkTextareaAutosize matInput [(ngModel)]="value"></textarea>
+    <button
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="value = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
 
   <div class="button-box">

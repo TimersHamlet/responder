@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class MainPhoneComponent {
   selected = 'option2';
+  value = ''
 }
