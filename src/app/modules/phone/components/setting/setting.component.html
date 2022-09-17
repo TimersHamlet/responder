@@ -6,11 +6,19 @@
       matInput
       cdkTextareaAutosize
       placeholder="在这里编辑模板化的学习内容"
+      [(ngModel)]="studyContent"
+      (input)="store.setStudyContent(studyContent)"
     ></textarea>
+    <button
+      *ngIf="studyContent"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="studyContent = ''; store.setStudyContent('')"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
-  <div class="button-box">
-    <button mat-raised-button color="primary">保存</button>
-  </div>
 
   <app-title [label]="'随堂测设置'"></app-title>
   <mat-form-field appearance="fill">
@@ -29,9 +37,6 @@
       placeholder="在这里编辑模板化的随堂测内容"
     ></textarea>
   </mat-form-field>
-  <div class="button-box">
-    <button mat-raised-button color="primary">保存</button>
-  </div>
 
   <app-title [label]="'课堂表现设置'"></app-title>
   <mat-form-field appearance="fill">
@@ -50,9 +55,6 @@
       placeholder="在这里编辑模板化的课堂表现内容"
     ></textarea>
   </mat-form-field>
-  <div class="button-box">
-    <button mat-raised-button color="primary">保存</button>
-  </div>
 
   <app-title [label]="'课后作业设置'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
@@ -64,12 +66,4 @@
       cdkTextareaAutosize
     ></textarea>
   </mat-form-field>
-  <div class="button-box">
-    <button mat-raised-button color="primary">保存</button>
-  </div>
-
-  <app-title [label]="'全部保存'"></app-title>
-  <div class="button-box">
-    <button mat-raised-button color="primary">全部保存</button>
-  </div>
 </div>
