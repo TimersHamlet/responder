@@ -9,7 +9,7 @@ import {PlatformModule} from '@angular/cdk/platform';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
