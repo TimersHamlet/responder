@@ -10,10 +10,12 @@ export class SettingPhoneComponent implements OnInit {
   selected = 'option2';
   binding ='';
   studyContent = ''
+  homework =''
 
   constructor(public store:StoreService){}
 
   ngOnInit(): void {
     this.studyContent = this.store.getStudyContent()
+    this.homework = this.store.getHomework()
   }
 }

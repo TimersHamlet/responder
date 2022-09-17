@@ -58,12 +58,20 @@
 
   <app-title [label]="'课后作业设置'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>学习内容</mat-label>
     <textarea
-      matInput
-      placeholder="在这里编辑模板化的课后作业"
-      [(ngModel)]="binding"
       cdkTextareaAutosize
+      matInput
+      [(ngModel)]="homework"
+      (input)="store.setHomework(homework)"
     ></textarea>
+    <button
+      *ngIf="homework"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="store.setHomework(homework)"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
 </div>

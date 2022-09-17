@@ -11,11 +11,13 @@ export class MainPhoneComponent implements OnInit {
   value = '';
   name = '';
   studyContent = ''
+  homework = ''
 
   constructor(public store: StoreService) {}
 
   ngOnInit(): void {
     this.studyContent = this.store.getStudyContent()
+    this.homework = this.store.getHomework()
   }
 
   inputFun() {

@@ -24,4 +24,11 @@ export class StoreService {
   getStudyContent() {
     return this.studyContent;
   }
+
+  setHomework(homework: string) {
+    this.homework = homework;
+  }
+  getHomework() {
+    return this.homework;
+  }
 }

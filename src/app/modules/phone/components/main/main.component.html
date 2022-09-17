@@ -64,13 +64,18 @@
   <app-title [label]="'课后作业'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>课后作业</mat-label>
-    <textarea cdkTextareaAutosize matInput [(ngModel)]="value"></textarea>
+    <textarea
+      cdkTextareaAutosize
+      matInput
+      [(ngModel)]="homework"
+      (input)="store.setHomework(homework)"
+    ></textarea>
     <button
-      *ngIf="value"
+      *ngIf="homework"
       matSuffix
       mat-icon-button
       aria-label="Clear"
-      (click)="value = ''"
+      (click)="store.setHomework(homework)"
     >
       <mat-icon>close</mat-icon>
     </button>
