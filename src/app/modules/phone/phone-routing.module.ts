@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPhoneComponent } from './components/main/main.component';
 import { PhoneRootComponent } from './components/phone-root.component';
+import { SettingPhoneComponent } from './components/setting/setting.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
       },
       {
         path:'setting',
-        component:MainPhoneComponent
+        component:SettingPhoneComponent
       }
     ]
   }
