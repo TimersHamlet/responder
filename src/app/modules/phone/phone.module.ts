@@ -12,6 +12,8 @@ import { SettingPhoneComponent } from './components/setting/setting.component';
 import { FormsModule } from '@angular/forms';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import {MatIconModule} from '@angular/material/icon'
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon'
     MainPhoneComponent,
     TitleComponent,
     SettingPhoneComponent,
+    DialogComponent
   ],
   imports: [
     PhoneRoutingModule,
@@ -29,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon'
     MatButtonModule,
     FormsModule,
     TextFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [],

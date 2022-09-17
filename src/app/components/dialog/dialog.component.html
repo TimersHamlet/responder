@@ -1,0 +1,36 @@
+<div class="body">
+  <app-title [label]="'选项名称'"></app-title>
+  <mat-form-field appearance="fill" class="width">
+    <mat-label>选项名称</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="option"
+      placeholder="请输入选项名称"
+      required
+    />
+    <mat-error *ngIf="option === ''">选项名称不能为空</mat-error>
+    <button
+      *ngIf="option"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="option = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="button-box">
+    <button mat-raised-button (click)="onCancel()">取消</button>
+    <button
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      (click)="onClick()"
+      [disabled]="option === ''"
+    >
+      确认
+    </button>
+  </div>
+</div>
