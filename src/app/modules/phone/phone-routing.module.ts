@@ -1,11 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainPhoneComponent } from './components/main/main.component';
 import { PhoneRootComponent } from './components/phone-root.component';
 
 const routes: Routes = [
   {
     path: '',
-    component:PhoneRootComponent
+    component:PhoneRootComponent,
+    children:[
+      {
+        path:'main',
+        component:MainPhoneComponent
+      },
+      {
+        path:'setting',
+        component:MainPhoneComponent
+      }
+    ]
   }
 ];
 

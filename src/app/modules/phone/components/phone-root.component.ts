@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-phone-root',
   templateUrl: './phone-root.component.html',
   styleUrls: ['./phone-root.component.scss'],
 })
-export class PhoneRootComponent {
+export class PhoneRootComponent implements OnInit {
+
   tabList = [
     {
       tabId: 'main',
@@ -21,9 +23,18 @@ export class PhoneRootComponent {
 
   activedUrl = '../../../../assets/icons/cat-actived.png';
 
-  currentID = '';
+  currentID = 'main';
+
+  constructor(private router: Router){
+
+  }
+
+  ngOnInit(): void {
+    this.router.navigateByUrl(`phone/${this.currentID}`)
+  }
 
   tabClick = (tabId:string) => {
     this.currentID = tabId
+    this.router.navigateByUrl(`phone/${this.currentID}`)
   };
 }
