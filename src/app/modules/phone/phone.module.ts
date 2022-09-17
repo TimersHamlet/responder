@@ -6,6 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MainPhoneComponent } from './components/main/main.component';
 import { TitleComponent } from 'src/app/components/title/title.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [PhoneRootComponent, MainPhoneComponent,TitleComponent],
@@ -14,6 +16,8 @@ import { TitleComponent } from 'src/app/components/title/title.component';
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [],
