@@ -65,6 +65,7 @@
 
   <app-title [label]="'课后作业设置'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
+    <mat-label>课后作业</mat-label>
     <textarea
       cdkTextareaAutosize
       matInput
@@ -76,7 +77,7 @@
       matSuffix
       mat-icon-button
       aria-label="Clear"
-      (click)="store.setHomework(homework)"
+      (click)="homework = '';store.setHomework('')"
     >
       <mat-icon>close</mat-icon>
     </button>
