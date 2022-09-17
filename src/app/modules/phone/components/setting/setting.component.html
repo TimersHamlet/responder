@@ -22,7 +22,7 @@
 
   <app-title [label]="'随堂测设置'"></app-title>
   <mat-form-field appearance="fill">
-    <mat-label class="select">选择课堂表现版本</mat-label>
+    <mat-label class="select">选择随堂测版本</mat-label>
     <mat-select [(value)]="selected" (selectionChange)="selectChange()">
       <mat-option
         *ngFor="let item of testResultList"
@@ -38,6 +38,10 @@
       matInput
       cdkTextareaAutosize
       placeholder="在这里编辑模板化的随堂测内容"
+      [(ngModel)]="testResult"
+      (input)="
+        store.updateTestResultItem({ option: selected, result: testResult })
+      "
     ></textarea>
   </mat-form-field>
 

@@ -44,11 +44,22 @@
   <app-title [label]="'随堂测'"></app-title>
   <mat-form-field appearance="fill">
     <mat-label class="select">选择随堂测版本</mat-label>
-    <mat-select [(value)]="selected">
-      <mat-option value="option1">Option 1</mat-option>
-      <mat-option value="option2">Option 2</mat-option>
-      <mat-option value="option3">Option 3</mat-option>
+    <mat-select [(value)]="selected" (selectionChange)="selectChange()">
+      <mat-option
+        *ngFor="let item of testResultList"
+        value="{{ item.option }}"
+        >{{ item.option }}</mat-option
+      >
     </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>随堂测内容</mat-label>
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      readonly
+      value="{{testResult}}"
+    ></textarea>
   </mat-form-field>
 
   <app-title [label]="'课堂表现'"></app-title>

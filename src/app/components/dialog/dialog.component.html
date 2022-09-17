@@ -25,7 +25,7 @@
     <button mat-raised-button (click)="onCancel()">取消</button>
     <button
       mat-raised-button
-      mat-dialog-close
+      [mat-dialog-close]="option"
       color="primary"
       (click)="onClick()"
       [disabled]="option === ''"

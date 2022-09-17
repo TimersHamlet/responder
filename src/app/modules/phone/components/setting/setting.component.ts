@@ -14,6 +14,7 @@ export class SettingPhoneComponent implements OnInit {
   studyContent = '';
   homework = '';
   testResultList: Array<TypeTestResult> = [];
+  testResult = '';
 
   constructor(public store: StoreService, public dialog: MatDialog) {}
 
@@ -21,14 +22,26 @@ export class SettingPhoneComponent implements OnInit {
     this.studyContent = this.store.getStudyContent();
     this.homework = this.store.getHomework();
     this.testResultList = this.store.getTestResultList();
+    if(this.testResultList.length!==0){
+      this.selected = this.testResultList[0].option
+      this.testResult = this.testResultList[0].result
+    }
   }
 
   selectChange(): void {
     if (this.selected === 'add') {
+      this.testResult = ''
       const dialogRef = this.dialog.open(DialogComponent);
       dialogRef.afterClosed().subscribe((result) => {
-        this.selected=this.testResultList[0].option
+        this.selected = result;
+        this.testResult = ''
       });
+    } else {
+      this.testResultList = this.store.getTestResultList();
+      const currentIndex = this.testResultList.findIndex(
+        (item) => item.option === this.selected
+      );
+      this.testResult = this.testResultList[currentIndex].result;
     }
   }
 }
