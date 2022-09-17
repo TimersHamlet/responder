@@ -23,7 +23,7 @@
   <app-title [label]="'随堂测设置'"></app-title>
   <mat-form-field appearance="fill">
     <mat-label class="select">选择随堂测版本</mat-label>
-    <mat-select [(value)]="selected" (selectionChange)="selectChange()">
+    <mat-select [(value)]="testSelected" (selectionChange)="testSelectChange()">
       <mat-option
         *ngFor="let item of testResultList"
         value="{{ item.option }}"
@@ -40,7 +40,7 @@
       placeholder="在这里编辑模板化的随堂测内容"
       [(ngModel)]="testResult"
       (input)="
-        store.updateTestResultItem({ option: selected, result: testResult })
+        store.updateTestResultItem({ option: testSelected, result: testResult })
       "
     ></textarea>
   </mat-form-field>
@@ -48,10 +48,13 @@
   <app-title [label]="'课堂表现设置'"></app-title>
   <mat-form-field appearance="fill">
     <mat-label class="select">选择课堂表现版本</mat-label>
-    <mat-select [(value)]="selected">
-      <mat-option value="option1">Option 1</mat-option>
-      <mat-option value="option2">Option 2</mat-option>
-      <mat-option value="option3">Option 3</mat-option>
+    <mat-select [(value)]="behaveSelected" (selectionChange)="behaveSelectChange()">
+      <mat-option
+        *ngFor="let item of behaveList"
+        value="{{ item.option }}"
+        >{{ item.option }}</mat-option
+      >
+      <mat-option value="add">+</mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field class="full-width" appearance="fill">
@@ -60,6 +63,10 @@
       matInput
       cdkTextareaAutosize
       placeholder="在这里编辑模板化的课堂表现内容"
+      [(ngModel)]="behave"
+      (input)="
+        store.updateBehaveItem({ option: behaveSelected, behave: behave })
+      "
     ></textarea>
   </mat-form-field>
 

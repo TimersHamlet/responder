@@ -4,8 +4,7 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
-import { StoreService, TypeTestResult } from 'src/app/services/store.service';
-import { FormControl, Validators } from '@angular/forms';
+import { StoreService, TypeBehave, TypeTestResult } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-dialog',
@@ -17,12 +16,19 @@ export class DialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
-    public store: StoreService
+    public store: StoreService,
+    @Inject(MAT_DIALOG_DATA) public data: string
   ) {}
 
   onClick() {
-    const param: TypeTestResult = { option: this.option, result: '' };
-    this.store.addTestResultItem(param);
+    if(this.data==='test'){
+      const testParam: TypeTestResult = { option: this.option, result: '' };
+      this.store.addTestResultItem(testParam);
+    } 
+    if(this.data==='behave'){
+      const behaveparam: TypeBehave = { option: this.option, behave: '' };
+      this.store.addBehaveItem(behaveparam);
+    } 
   }
 
   onCancel() {

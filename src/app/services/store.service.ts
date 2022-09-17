@@ -61,4 +61,24 @@ export class StoreService {
   getTestResultList(){
     return this.testResultList
   }
+
+  addBehaveItem(behaveItem: TypeBehave) {
+    this.behaveList.push(behaveItem)
+  }
+  updateBehaveItem(behaveItem:TypeBehave) {
+    this.behaveList.map((item)=>{
+      if(item.option===behaveItem.option){
+        item.behave = behaveItem.behave
+      }
+    })
+  }
+  deleteBehaveItem(option:string) {
+    const currentIndex =this.behaveList.findIndex(item=>item.option===option)
+    if(currentIndex!==-1){
+      this.behaveList.splice(currentIndex,1)
+    }
+  }
+  getBehaveList(){
+    return this.behaveList
+  }
 }
