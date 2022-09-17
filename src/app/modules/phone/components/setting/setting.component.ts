@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SettingPhoneComponent {
   selected = 'option2';
+
+  binding ='';
 }

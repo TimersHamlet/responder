@@ -1,17 +1,15 @@
 <div class="body">
-
   <app-title [label]="'基础信息'"></app-title>
   <mat-form-field appearance="fill">
     <mat-label>姓名</mat-label>
-    <input matInput placeholder="请输入学生姓名">
+    <input matInput placeholder="请输入学生姓名" />
   </mat-form-field>
 
   <app-title [label]="'学习内容'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>学习内容</mat-label>
-    <textarea matInput></textarea>
+    <textarea cdkTextareaAutosize matInput></textarea>
   </mat-form-field>
-
 
   <app-title [label]="'随堂测'"></app-title>
   <mat-form-field appearance="fill">
@@ -36,11 +34,10 @@
   <app-title [label]="'课后作业'"></app-title>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>课后作业</mat-label>
-    <textarea matInput></textarea>
+    <textarea cdkTextareaAutosize matInput></textarea>
   </mat-form-field>
 
   <div class="button-box">
     <button mat-raised-button color="primary">确认生成</button>
   </div>
-
 </div>

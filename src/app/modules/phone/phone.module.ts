@@ -9,6 +9,8 @@ import { TitleComponent } from 'src/app/components/title/title.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { SettingPhoneComponent } from './components/setting/setting.component';
+import { FormsModule } from '@angular/forms';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SettingPhoneComponent } from './components/setting/setting.component';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    FormsModule,
+    TextFieldModule,
   ],
   providers: [],
   bootstrap: [],
