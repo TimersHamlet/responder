@@ -1,0 +1,59 @@
+<div class="body">
+  <app-title [label]="'学习内容设置'"></app-title>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>学习内容</mat-label>
+    <textarea matInput placeholder="在这里编辑模板化的学习内容"></textarea>
+  </mat-form-field>
+  <div class="button-box">
+    <button mat-raised-button color="primary">保存</button>
+  </div>
+
+  <app-title [label]="'随堂测设置'"></app-title>
+  <mat-form-field appearance="fill">
+    <mat-label class="select">选择课堂表现版本</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option value="option1">Option 1</mat-option>
+      <mat-option value="option2">Option 2</mat-option>
+      <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>随堂测内容</mat-label>
+    <textarea matInput placeholder="在这里编辑模板化的随堂测内容"></textarea>
+  </mat-form-field>
+  <div class="button-box">
+    <button mat-raised-button color="primary">保存</button>
+  </div>
+
+  <app-title [label]="'课堂表现设置'"></app-title>
+  <mat-form-field appearance="fill">
+    <mat-label class="select">选择课堂表现版本</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option value="option1">Option 1</mat-option>
+      <mat-option value="option2">Option 2</mat-option>
+      <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>课堂表现</mat-label>
+    <textarea matInput placeholder="在这里编辑模板化的课堂表现内容"></textarea>
+  </mat-form-field>
+  <div class="button-box">
+    <button mat-raised-button color="primary">保存</button>
+  </div>
+
+  <app-title [label]="'课后作业设置'"></app-title>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>学习内容</mat-label>
+    <textarea matInput placeholder="在这里编辑模板化的课后作业"></textarea>
+  </mat-form-field>
+  <div class="button-box">
+    <button mat-raised-button color="primary">保存</button>
+  </div>
+
+  <app-title [label]="'全部保存'"></app-title>
+  <div class="button-box">
+    <button mat-raised-button color="primary">全部保存</button>
+  </div>
+
+</div>

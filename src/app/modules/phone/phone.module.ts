@@ -6,18 +6,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MainPhoneComponent } from './components/main/main.component';
 import { TitleComponent } from 'src/app/components/title/title.component';
-import {MatSelectModule} from '@angular/material/select';
-import {MatButtonModule} from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { SettingPhoneComponent } from './components/setting/setting.component';
 
 @NgModule({
-  declarations: [PhoneRootComponent, MainPhoneComponent,TitleComponent],
+  declarations: [
+    PhoneRootComponent,
+    MainPhoneComponent,
+    TitleComponent,
+    SettingPhoneComponent,
+  ],
   imports: [
     PhoneRoutingModule,
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [],

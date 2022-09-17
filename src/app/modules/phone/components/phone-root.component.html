@@ -1,18 +1,20 @@
 <div class="body">
   <router-outlet></router-outlet>
-  <footer class="footer">
-    <div class="tab-item" *ngFor="let item of tabList">
-      <div
-        class="iconBox"
-        [ngClass]="{ 'icon-actived': currentID === item.tabId }"
-        (click)="tabClick(item.tabId)"
-      >
-        <img
-          src="{{ currentID === item.tabId ? activedUrl : item.iconUrl }}"
-          alt="cat"
-        />
+  <div class="box">
+    <footer class="footer">
+      <div class="tab-item" *ngFor="let item of tabList">
+        <div
+          class="iconBox"
+          [ngClass]="{ 'icon-actived': currentID === item.tabId }"
+          (click)="tabClick(item.tabId)"
+        >
+          <img
+            src="{{ currentID === item.tabId ? activedUrl : item.iconUrl }}"
+            alt="cat"
+          />
+        </div>
+        <span>{{ item.tabName }}</span>
       </div>
-      <span>{{ item.tabName }}</span>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </div>

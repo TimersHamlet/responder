@@ -9,6 +9,7 @@
   bottom: 0;
   box-shadow: 0 5px 15px 15px #ddd;
   display: flex;
+  background-color: #fff;
 }
 
 .tab-item {
@@ -42,4 +43,9 @@
     height:4vh;
     transition: height 0.3s;
   }
+}
+
+.box{
+  width: 100%;
+  height: 10vh;
 }
