@@ -6,15 +6,15 @@
       matInput
       type="text"
       [(ngModel)]="name"
-      (input)="inputFun()"
+      (input)="store.setName(name)"
       placeholder="请输入学生姓名"
     />
     <button
-      *ngIf="value"
+      *ngIf="name"
       matSuffix
       mat-icon-button
       aria-label="Clear"
-      (click)="value = ''"
+      (click)="name = ''; store.setName('')"
     >
       <mat-icon>close</mat-icon>
     </button>
