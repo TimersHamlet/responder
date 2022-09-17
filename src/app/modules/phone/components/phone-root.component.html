@@ -1,1 +1,8 @@
-<div>phone-root</div>
+<div class="body">
+  <footer class="footer">
+    <div class="tab-item" *ngFor="let item of tabList">
+      <div class="iconBox"><img src="{{ item.iconUrl }}" alt="cat" /></div>
+      <span>{{ item.tabName }}</span>
+    </div>
+  </footer>
+</div>
