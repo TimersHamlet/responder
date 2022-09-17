@@ -1,0 +1,18 @@
+.body{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.icon {
+  background-color: #673ab7;
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.label{
+  padding-left: 8px;
+  font-size: 16px;
+}
